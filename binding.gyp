@@ -93,5 +93,8 @@
                 ]
             ]
         }
-    ]
+    ],
+    "variables": {
+        "openssl_fips": ""
+    }
 }
