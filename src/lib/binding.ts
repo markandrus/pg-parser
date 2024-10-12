@@ -1,8 +1,16 @@
-import bindings from 'bindings'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import nodeGypBuild from 'node-gyp-build'
+
 import type { Node } from './ast'
 import type { TokenKind, KeywordKind } from './tokens'
 
-const loadAddon = () => bindings('queryparser')
+const _dirname = typeof __dirname !== 'undefined'
+  ? __dirname
+  : dirname(fileURLToPath(import.meta.url))
+
+const loadAddon = () => (nodeGypBuild as (path: string) => any)(join(_dirname, '..'))
 
 let PgQuery: {
   parseQueryAsync: (
