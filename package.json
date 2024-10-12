@@ -1,6 +1,6 @@
 {
-  "name": "@pg-nano/pg-parser",
-  "version": "16.1.4",
+  "name": "@markandrus/pg-parser",
+  "version": "16.1.4-markandrus-1",
   "sideEffects": false,
   "description": "Node.js addon for PostgreSQL query parsing",
   "license": "MIT",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pg-nano/pg-parser.git"
+    "url": "https://github.com/markandrus/pg-parser.git"
   },
   "scripts": {
     "dev": "tinyrun --names js,gyp 'pnpm -s dev:js' 'pnpm -s dev:gyp'",
